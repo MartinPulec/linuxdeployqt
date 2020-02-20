@@ -463,7 +463,7 @@ LibraryInfo parseLddLibraryLine(const QString &line, const QString &appDirPath, 
 		Qt from ppas. Hence we make sure libicu is always bundled since it cannot be assumed to be on target sytems
 		*/
 		// Manual make of Qt deploys it to /usr/local/Qt-x.x.x so we cannot remove this path just like that, so let's allow known libs of Qt.
-		if (!trimmed.contains("libicu") && !trimmed.contains("lib/libQt") && !trimmed.contains("lib/libqgsttools")) {
+		if (!trimmed.contains("libicu") && !trimmed.contains("libQt") && !trimmed.contains("lib/libqgsttools")) {
 		    if ((trimmed.startsWith("/usr") or (trimmed.startsWith("/lib")))) {
 			return info;
 		    }
